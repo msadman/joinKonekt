@@ -1,9 +1,7 @@
-const { PrismaClient } = require('@prisma/client')
-const prisma = new PrismaClient()
+const prisma = require("../utils/prisma");
 
 // Loads the member.js file
 const memberData = require("../seeds/member.js");
-const member = require('../seeds/member.js');
 
 async function createMultipleMembers() {
   // Check if a member already exist
