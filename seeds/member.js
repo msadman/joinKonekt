@@ -21,3 +21,5 @@ const member = [
     name: "Salim"
   },
 ];
+
+module.exports = member;
