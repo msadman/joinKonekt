@@ -1,8 +1,8 @@
-const prisma = require("../utils/prisma");
+const prisma = require("./prisma");
 
 export async function getRandomMember() {
   const firstRecord = await prisma.member.findFirst()
-  const lastRecord = await prisma.member.findLast({
+  const lastRecord = await prisma.member.findFirst({
     orderBy: {
       id: 'desc'
     }
@@ -11,7 +11,7 @@ export async function getRandomMember() {
   const minVal = firstRecord.id;
   const maxVal = lastRecord.id;
 
-  const randomNum = Math.floor(Math.random() * (maxVal - minVal + 1)) + min;
+  const randomNum = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
 
   const selectedUser = await prisma.member.findUnique({
     where: {
@@ -19,7 +19,7 @@ export async function getRandomMember() {
     }
   })
 
-  return selectedUser;
+  return selectedUser.name;
 }
 
 export async function getAllMembers() {
