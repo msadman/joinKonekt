@@ -8,7 +8,7 @@ export default async function RandomMember() {
   }
   return (
     <>
-      <h1>Click the button to get random members!</h1>
+      <h1>Ready for deployment testing!</h1>
       {/* <GenerateButton handleBtnCLick={handleBtnCLick} /> */}
     </>
   )
