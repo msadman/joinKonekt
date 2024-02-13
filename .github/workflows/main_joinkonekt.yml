@@ -59,4 +59,4 @@ jobs:
           app-name: 'JoinKonekt'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_510D64F5022B476F944237C31A100FC9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1CE71C95556244B2A30D7ED8702DE16E }}
