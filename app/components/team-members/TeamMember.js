@@ -1,18 +1,18 @@
-import classes from "./TeamMember.module.css"
+import { data } from "autoprefixer";
+import classes from "./team-member.module.css"
+import { getAllMembers } from "@/utils/members"
 
-export default function TeamMember() {
+export default async function TeamMember() {
+  const members = await getAllMembers();
   return (
     <div className={classes.container}>
       <h3>Team Members:</h3>
       <ul>
-        <li>Red</li>
-        <li>Garvit</li>
-        <li>Salim</li>
-        <li>Jian</li>
-        <li>Taiye</li>
-        <li>Isha</li>
-        <li>Pawanjeet</li>
+        {members.map(member => (
+          <li key={member.id}>{member.name}</li>
+        ))}
       </ul>
     </div>
-  )
+  );
 }
+

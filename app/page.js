@@ -1,5 +1,5 @@
-import Image from "next/image";
 import TeamMember from "./components/team-members/TeamMember";
+import RandomMember from "./components/team-members/RandomMember";
 
 export default function Home() {
   return (
@@ -7,8 +7,14 @@ export default function Home() {
       <h1>Deployment Test!</h1>
 
       <div>
-        <TeamMember />
+        <TeamMember/>
+      </div>
+
+      <div>
+        <RandomMember />
       </div>
     </main>
   );
 }
+
+
